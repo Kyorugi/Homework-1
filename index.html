@@ -9,26 +9,71 @@
   </head>
 
   <style>
+
+    li .lo:hover {
+      background-color: hsla(0, 7%, 97%, 0.989);
+      border-radius: 10px;
+      font-size: 34px;
+    }
+    
+    li .hu:hover {
+      background-color: #e0456a;
+      border-radius: 10px;
+    }
+    li .al:hover {
+      background-color: #e0456a;
+      border-radius: 10px;
+    }
+    li .ow:hover {
+      background-color: #e0456a;
+      border-radius: 10px;
+    }
+
     body {
-      background-color: blue;
+      background-color: rgb(21, 4, 174);
     }
   </style>
-  <body>
-    <div id="header">
-      <a href="index.html">LOGO</a>
-      <nav id="main-navigation">
-        <ul>
-          <li><a href="link1.html">Link1</a></li>
-          <li><a href="link2.html">Link2</a></li>
-          <li><a href="link3.html">Link3</a></li>
-        </ul>
-      </nav>
-      <div id="lead-banner">
-        <img
-          src="/Users/kamilchwesiuk/Desktop/homeworks/Homework-1/IMG/rodzina pieskow.jpg"
-        />
-      </div>
+</head>
+<body>
+  <div>
+    <nav>
+      <ul class="main">
+         <li><a href="index.html" class="lo">Logo</a></li>
+       </ul>
+    
+      <ul class="main-navigation">
+        <li><a href="link1.html" class="hu">Husky</a></li>
+        <li><a href="link2.html" class="al">Alaskan</a></li>
+        <li><a href="link3.html" class="ow">Owczarek</a></li>
+      </ul>
+      <button class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </button>
+    </nav>
+
+    <script>
+
+      const mobileNav = document.querySelector('ul');
+      const burgerIcon = document.querySelector('.burder');
+
+
+      burgerIcon.addEventListener('click', function(){
+          mobileNav.classList.toggle('active')
+          burgerIcon.classList.toggle('active')
+
+      })
+
+    </script>
+  </div>
+
+    <div id="lead-banner">
+      <img src="IMG/rodzina pieskow.jpg" />
+      <img src="IMG/Alaskan-malamute.jpg" />
+      <img src="IMG/Syberian husky.jpg" />
     </div>
+
     <div>
       <h1>Kliknij i sprawdź linki ;)</h1>
       <p>
@@ -81,11 +126,13 @@
         dignissimos odio ratione veritatis, molestiae rem aliquid, nostrum
         dolore culpa accusamus ipsa!
       </p>
+      <p><br/></p>
+      <p><br/></p>
+      <p><br/></p>
     </div>
 
-    <div id="footer-text">
-      <p>Stopka Twojej strony</p>
-      <p>2022,<strong>infoShare</strong></p>
+    <div class="box">
+      <p><br />Stopka Twojej strony<br />2022,<strong>infoShare</strong></p>
     </div>
   </body>
 </html>

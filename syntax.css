@@ -1,1 +1,124 @@
-//file of index.html//
+/*/file of index.html/*/
+
+body {
+  margin: 30px;
+}
+
+#lead-banner img {
+  width: 400px;
+  height: 300px;
+  display: inline-block;
+  margin: 20px;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: lightskyblue;
+  font-size: 45px;
+}
+
+p {
+  color: white;
+  font-family: "Times New Roman";
+}
+
+nav {
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  list-style-type: none;
+  position: relative;
+}
+
+.main a {
+  color: #e0456a;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 1px;
+}
+
+.main-navigation a {
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px;
+  list-style-type: none;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  text-align: right;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+nav li {
+  flex: 1 1 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.hamburger {
+  background: 3em;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.line {
+  width: 3em;
+  height: 0.3em;
+  background: violet;
+  margin: 0.7em;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.box p {
+  text-align: center;
+  color: rgb(21, 4, 174);
+  margin-right: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .hamburger {
+    display: block;
+    transition: 0.3s ease-in-out;
+  }
+
+  ul {
+    position: absolute;
+    right: 0;
+    top: 5vh;
+    background-color: #e0456a;
+    height: 92vh;
+    flex-direction: column;
+    text-align: center;
+    transform: translate(100%);
+    transition: 0.3s ease-in-out;
+  }
+
+  ul.active {
+    transform: translate(0%);
+  }
+
+  a {
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  ul {
+    width: 100%;
+  }
+}
